@@ -1,0 +1,7 @@
+<div class="card">
+  <% @customers.each do |customer| %>
+    <%= render partial: ',.customer',
+        locals: customer
+    %>
+  <% end %>
+</div>
