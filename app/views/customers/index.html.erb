@@ -1,5 +1,12 @@
-<div id="container">
-    <%= render partial: 'customers/customer',
-        collection: @customers
-    %>
-</div>
+<nav class="navbar">
+    <ul>
+        <li><%= link_to "Alphabetized", alphabetized_path %></li>
+        <li><%= link_to "Missing Emails", missing_email_path %></li>
+    </ul>
+</nav>
+    <h1 class="title">All Customers</h1>
+    <div class="columns is-multiline">
+        <%= render partial: 'customers/customer',
+            collection: @customers
+        %>
+    </div>

@@ -1,17 +1,21 @@
 <div class="column">
   <div class="card">
-    <h1 class="title is-2"><%= customer.full_name %></h1>
+    <h1 class="card-header-title"><%= customer.full_name %></h1>
       <% if customer.image.present? %>
         <div class="card-image">
-          <figure class="image">
+          <figure class="image is-4by5">
             <%= image_tag customer.image %>
           </figure>
         </div>
       <% end %>
     <div class="card-content">
-      <p><%= customer.phone_number %></p>
+      <div class="container">
+        <p><%= customer.phone_number %></p>
+      </div>
       <% if customer.email_address.present? %>
-          <%= customer.email_address %>
+        <div class="container">
+          <p><%= customer.email_address %></p>
+        </div>
       <% end %>
     </div>
   </div>
